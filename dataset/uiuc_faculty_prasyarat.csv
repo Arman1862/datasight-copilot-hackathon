@@ -1,0 +1,42 @@
+kode_mk,nama_mk,prasyarat_kode,prasyarat_nama
+MATH220,Calculus,MATH115,Preparation for Calculus
+MATH221,Calculus I,MATH115,Preparation for Calculus
+MATH231,Calculus II,MATH220,Calculus
+MATH241,Calculus III,MATH231,Calculus II
+MATH285,Intro Differential Equations,MATH241,Calculus III
+MATH257,Linear Algebra with Computat,MATH220,Calculus
+MATH415,Applied Linear Algebra,MATH241,Calculus III
+MATH461,Probability Theory,MATH241,Calculus III
+CS173,Discrete Structures,MATH220,Calculus
+CS173,Discrete Structures,CS124,Intro to Computer Science I
+ECE120,Introduction to Computing,ECE110,Introduction to Electronics
+ECE210,Analog Signal Processing,ECE110,Introduction to Electronics
+ECE210,Analog Signal Processing,MATH285,Intro Differential Equations
+ECE220,Computer Systems & Programming,ECE120,Introduction to Computing
+ECE313,Probability with Engrg Applic,MATH241,Calculus III
+ECE385,Digital Systems Laboratory,ECE220,Computer Systems & Programming
+ECE391,Computer Systems Engineering,ECE220,Computer Systems & Programming
+ECE391,Computer Systems Engineering,CS225,Data Structures
+ECE411,Computer Organization & Design,ECE391,Computer Systems Engineering
+CS128,Intro to Computer Science II,CS124,Intro to Computer Science I
+CS225,Data Structures,CS128,Intro to Computer Science II
+CS225,Data Structures,CS173,Discrete Structures
+CS222,Software Design Lab,CS128,Intro to Computer Science II
+CS233,Computer Architecture,CS128,Intro to Computer Science II
+CS341,System Programming,CS225,Data Structures
+CS341,System Programming,CS233,Computer Architecture
+CS357,Numerical Methods I,MATH257,Linear Algebra with Computat
+CS357,Numerical Methods I,CS128,Intro to Computer Science II
+CS374,Intro to Algorithms & Models of Computation,CS225,Data Structures
+CS374,Intro to Algorithms & Models of Computation,CS173,Discrete Structures
+CS411,Database Systems,CS225,Data Structures
+CS421,Progrmg Languages & Compilers,CS225,Data Structures
+CS425,Distributed Systems,CS341,System Programming
+CS438,Communication Networks,CS341,System Programming
+CS440,Artificial Intelligence,CS225,Data Structures
+CS440,Artificial Intelligence,MATH257,Linear Algebra with Computat
+CS446,Machine Learning,CS374,Intro to Algorithms & Models of Computation
+CS446,Machine Learning,MATH415,Applied Linear Algebra
+CS461,Computer Security I,CS225,Data Structures
+CS473,Algorithms,CS374,Intro to Algorithms & Models of Computation
+CS498,Special Topics,CS225,Data Structures

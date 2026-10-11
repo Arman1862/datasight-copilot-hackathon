@@ -1,0 +1,21 @@
+{
+  "name": "datasight_curriculum_audit",
+  "description": "Menganalisis performa nilai mata kuliah dan relasi kurikulum prasyarat berdasarkan data aktual yang dilampirkan Kaprodi di chat. Sistem tidak menggunakan dataset simulasi.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "data_input": {
+        "type": "string",
+        "description": "Isi lengkap berkas data nilai mahasiswa dan struktur kurikulum prasyarat (format teks CSV atau tabel) yang dilampirkan oleh Kaprodi di chat."
+      },
+      "de_threshold": {
+        "type": "number",
+        "description": "Ambang batas persentase nilai D/E kritis yang memicu penandaan risiko (default: 30.0)",
+        "default": 30.0
+      }
+    },
+    "required": [
+      "data_input"
+    ]
+  }
+}

@@ -1,0 +1,147 @@
+kode_mk,nama_mk,total_mhs,rata_rata_nilai,kehadiran,nilai_A,nilai_B,nilai_C,nilai_D,nilai_E
+CS100,Computer Science Orientation,347,96.4,90.6,319,16,6,2,4
+CS101,Intro Computing: Engrg & Sci,372,90.1,85.1,293,45,13,7,14
+CS105,Intro Computing: Non-Tech,422,79.1,80.7,221,102,62,21,16
+CS124,Intro to Computer Science I,1062,92.3,86.9,879,108,29,24,22
+CS128,Intro to Computer Science II,578,84.0,80.9,393,83,52,17,33
+CS173,Discrete Structures,659,79.5,81.7,315,214,77,40,13
+CS210,Ethical & Professional Issues,61,91.4,90.7,46,11,3,0,1
+CS211,Ethical & Professional Conduct,119,97.5,93.0,107,12,0,0,0
+CS222,Software Design Lab,461,99.3,92.7,453,6,1,0,1
+CS225,Data Structures,833,88.2,83.8,624,110,44,24,31
+CS233,Computer Architecture,340,91.5,87.2,272,43,11,6,8
+CS307,Model & Learning in Data Sci,84,93.8,91.3,70,9,4,0,1
+CS340,Intro to Computer Systems,139,89.7,87.0,104,24,5,1,5
+CS341,System Programming,337,88.4,86.8,240,58,24,10,5
+CS357,Numerical Methods I,390,90.1,90.8,280,73,31,4,2
+CS361,Prob & Stat for Computer Sci,301,88.4,87.4,205,70,14,6,6
+CS374,Intro to Algs & Models of Comp,678,80.9,86.8,330,220,98,19,11
+CS409,The Art of Web Programming,217,93.1,90.4,174,34,5,0,4
+CS410,Text Information Systems,340,97.6,93.0,312,24,4,0,0
+CS411,Database Systems,454,96.4,92.1,401,45,5,2,1
+CS412,Introduction to Data Mining,180,91.2,91.4,130,41,7,0,2
+CS415,Game Development,232,93.4,91.8,187,33,10,0,2
+CS418,Interactive Computer Graphics,155,84.2,81.3,107,22,13,2,11
+CS421,Progrmg Languages & Compilers,280,84.7,86.5,173,60,34,9,4
+CS423,Operating Systems Design,95,92.6,93.0,70,22,3,0,0
+CS424,Real-Time Systems,54,94.9,93.0,44,9,1,0,0
+CS425,Distributed Systems,439,92.0,92.0,310,123,3,0,3
+CS426,Compiler Construction,36,89.6,93.0,24,9,3,0,0
+CS427,Software Engineering I,347,97.8,93.0,319,26,2,0,0
+CS433,Computer System Organization,41,85.4,89.6,23,13,4,1,0
+CS437,Topics in Internet of Things,78,98.1,93.0,72,6,0,0,0
+CS438,Communication Networks,123,89.2,91.9,77,41,4,0,1
+CS440,Artificial Intelligence,399,84.3,88.8,215,135,37,6,6
+CS441,Applied Machine Learning,551,97.3,91.7,505,38,3,5,0
+CS442,Trustworthy Machine Learning,22,90.9,93.0,14,8,0,0,0
+CS444,Deep Learning for Compt Visn,75,91.3,91.1,55,16,3,0,1
+CS445,Computational Photography,163,95.1,91.3,140,18,3,0,2
+CS446,Machine Learning,141,87.6,92.0,91,32,17,0,1
+CS447,Natural Language Processing,279,92.9,91.5,215,53,8,2,1
+CS450,Numerical Analysis,80,82.8,80.8,49,15,9,6,1
+CS460,Security Laboratory,21,98.8,93.0,20,1,0,0,0
+CS461,Computer Security I,55,73.2,85.4,16,25,11,0,3
+CS465,User Interface Design,185,96.8,92.2,163,21,0,1,0
+CS466,Introduction to Bioinformatics,78,82.1,85.8,41,23,10,3,1
+CS473,Algorithms,35,79.3,81.0,15,17,0,0,3
+CS498,Mobile Robotics for CS,164,97.1,93.0,146,17,1,0,0
+CS511,Advanced Data Management,78,98.7,93.0,74,4,0,0,0
+CS512,Data Mining Principles,75,89.3,91.1,51,17,6,1,0
+CS527,Topics in Software Engineering,61,91.4,93.0,41,19,1,0,0
+CS542,Stat Reinforcement Learning,43,89.5,89.7,28,13,1,1,0
+CS545,Machine Learning for Signals,76,96.1,93.0,65,10,1,0,0
+CS546,Adv Topics in NLP,133,97.0,91.9,120,12,0,0,1
+CS562,Adv. Trustworthy Mach. Lrng.,34,98.5,93.0,32,2,0,0,0
+CS567,Social Spaces,43,93.0,93.0,34,6,3,0,0
+CS580,Topics in Algrthmc Game Theory,27,92.6,93.0,19,8,0,0,0
+CS598,Foundations of Data Curation,708,97.6,92.6,646,59,1,2,0
+ECE101,Exploring Digital Info Technol,27,92.6,82.6,25,0,0,0,2
+ECE110,Introduction to Electronics,562,79.6,79.3,308,129,70,31,24
+ECE120,Introduction to Computing,573,84.2,87.1,320,176,53,15,9
+ECE205,Electrical & Electronic Ckts,258,88.6,89.2,180,45,26,7,0
+ECE206,Electrical & Electronics Lab,30,92.5,93.0,23,5,2,0,0
+ECE210,Analog Signal Processing,299,64.0,71.9,52,115,87,39,6
+ECE211,Analog Circuits & Systems,33,59.8,67.5,5,11,11,4,2
+ECE220,Computer Systems & Programming,379,73.7,77.9,141,135,62,24,17
+ECE298,Semiconductor Chips Revolution,70,97.5,93.0,65,3,2,0,0
+ECE310,Digital Signal Processing,250,73.8,76.2,101,69,50,27,3
+ECE311,Digital Signal Processing Lab,139,89.0,85.9,103,22,7,3,4
+ECE313,Probability with Engrg Applic,322,75.9,88.7,105,140,67,4,6
+ECE314,Probability in Engineering Lab,64,91.8,88.6,51,8,3,1,1
+ECE316,Ethics and Engineering,55,95.9,93.0,48,5,2,0,0
+ECE329,Fields and Waves I,179,76.5,76.6,90,41,27,11,10
+ECE330,Power Ckts & Electromechanics,167,87.7,92.2,96,61,9,1,0
+ECE333,Green Electric Energy,87,78.4,85.0,35,37,10,2,3
+ECE340,Semiconductor Electronics,85,66.5,73.2,21,30,22,8,4
+ECE342,Electronic Circuits,113,86.1,83.1,75,23,7,6,2
+ECE343,Electronic Circuits Laboratory,26,94.2,93.0,23,0,3,0,0
+ECE350,Fields and Waves II,24,89.6,93.0,15,8,1,0,0
+ECE365,Data Science and Engineering,33,96.2,93.0,28,5,0,0,0
+ECE380,Biomedical Imaging,24,86.5,93.0,13,9,2,0,0
+ECE385,Digital Systems Laboratory,320,85.2,88.6,181,99,30,10,0
+ECE391,Computer Systems Engineering,318,71.1,74.9,94,135,48,27,14
+ECE395,Advanced Digital Projects Lab,29,94.0,93.0,22,7,0,0,0
+ECE402,Electronic Music Synthesis,46,89.7,90.0,31,12,2,1,0
+ECE407,Cryptography,57,94.3,90.5,47,9,0,0,1
+ECE408,Applied Parallel Programming,341,76.5,84.8,120,145,56,16,4
+ECE411,Computer Organization & Design,78,85.6,93.0,34,43,1,0,0
+ECE417,Multimedia Signal Processing,37,91.2,85.4,29,5,1,2,0
+ECE420,Embedded DSP Laboratory,21,95.2,93.0,18,2,1,0,0
+ECE438,Communication Networks,47,89.4,93.0,29,16,2,0,0
+ECE444,IC Device Theory & Fabrication,27,80.6,87.8,13,8,5,1,0
+ECE445,Senior Design Project Lab,114,87.7,90.5,68,39,5,1,1
+ECE453,Wireless Communication Systems,27,96.3,93.0,23,4,0,0,0
+ECE459,Communications Systems,29,92.2,93.0,22,5,2,0,0
+ECE460,Optical Imaging,27,90.7,93.0,20,4,3,0,0
+ECE464,Power Electronics,97,80.2,85.8,44,36,12,3,2
+ECE469,Power Electronics Laboratory,38,95.4,85.6,35,1,0,2,0
+ECE470,Introduction to Robotics,81,93.8,93.0,61,20,0,0,0
+ECE476,Power System Analysis,25,85.0,93.0,11,13,1,0,0
+ECE482,Digital IC Design,48,75.5,81.3,16,22,6,3,1
+ECE486,Control Systems,139,89.9,93.0,96,30,13,0,0
+ECE488,Compound Semicond & Devices,27,88.9,93.0,15,12,0,0,0
+ECE490,Introduction to Optimization,29,91.4,93.0,19,10,0,0,0
+ECE512,Computer Microarchitecture,26,78.8,93.0,9,12,5,0,0
+ECE515,Control System Theory & Design,40,95.0,93.0,32,8,0,0,0
+ECE527,System-On-Chip Design,43,90.1,93.0,26,17,0,0,0
+ECE534,Random Processes,41,98.2,93.0,38,3,0,0,0
+ECE544,Pattern Recognition,21,94.0,93.0,16,5,0,0,0
+ECE549,Computer Vision,142,93.5,91.0,111,28,1,1,1
+ECE563,Information Theory,23,95.7,93.0,20,2,1,0,0
+ECE598,Broadband Wireline Circuits,39,97.4,93.0,35,4,0,0,0
+MATH101,Thinking Mathematically,116,73.5,76.1,51,31,20,4,10
+MATH103,Theory of Arithmetic,81,83.6,87.8,44,25,9,2,1
+MATH112,Algebra,411,76.0,80.7,165,151,59,18,18
+MATH115,Preparation for Calculus,477,62.4,67.2,94,171,124,53,35
+MATH124,Finite Mathematics,150,80.5,83.7,82,35,23,4,6
+MATH199,Merit for Math 115,46,96.7,93.0,42,2,2,0,0
+MATH213,Basic Discrete Mathematics,80,73.4,77.2,35,21,15,2,7
+MATH220,Calculus,739,67.3,64.8,275,196,119,62,87
+MATH221,Calculus I,790,78.0,80.9,360,255,107,47,21
+MATH225,Introductory Matrix Theory,102,68.1,87.5,21,37,40,3,1
+MATH231,Calculus II,1017,81.7,84.9,532,312,114,32,27
+MATH241,Calculus III,1854,77.4,81.0,870,519,306,89,70
+MATH257,Linear Algebra w Computat Appl,796,81.0,87.0,371,283,108,29,5
+MATH285,Intro Differential Equations,796,90.7,87.9,608,127,32,12,17
+MATH299,Topics in Mathematics,442,86.6,90.8,261,135,39,4,3
+MATH347,Fundamental Mathematics,230,80.2,84.5,109,83,24,5,9
+MATH402,Non Euclidean Geometry,28,82.1,93.0,12,12,4,0,0
+MATH403,Euclidean Geometry,26,93.3,93.0,22,1,3,0,0
+MATH405,Teacher's Course,24,99.0,93.0,23,1,0,0,0
+MATH412,Graph Theory,36,77.8,85.2,15,13,6,1,1
+MATH415,Applied Linear Algebra,108,86.1,87.8,70,23,11,1,3
+MATH416,Abstract Linear Algebra,98,81.9,81.6,57,22,11,5,3
+MATH417,Intro to Abstract Algebra,71,77.5,89.1,28,25,16,1,1
+MATH424,Honors Real Analysis,21,92.9,93.0,15,6,0,0,0
+MATH427,Honors Abstract Algebra,25,94.0,93.0,20,4,1,0,0
+MATH441,Differential Equations,126,81.0,87.4,59,45,17,3,2
+MATH442,Intro Partial Diff Equations,26,79.8,82.2,14,6,4,1,1
+MATH444,Elementary Real Analysis,52,82.2,84.9,24,23,2,2,1
+MATH446,Applied Complex Variables,57,86.0,88.1,38,10,7,0,2
+MATH447,Real Variables,48,81.8,84.2,26,14,5,1,2
+MATH453,Number Theory,22,70.5,73.9,7,8,4,2,1
+MATH461,Probability Theory,31,78.2,79.5,16,7,5,2,1
+MATH482,Linear Programming,22,77.3,80.3,10,6,4,2,0
+MATH500,Abstract Algebra I,24,88.5,93.0,13,11,0,0,0
+MATH540,Real Analysis,27,89.8,93.0,16,11,0,0,0
+MATH595,Group Cohomology,22,95.5,93.0,18,4,0,0,0

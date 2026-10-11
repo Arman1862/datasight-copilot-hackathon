@@ -1,0 +1,687 @@
+
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Laporan Eksekutif Audit Kurikulum — DataSight Copilot</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1f2328;
+    background: #ffffff;
+    padding: 32px 16px;
+  }
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #ffffff;
+  }
+
+  /* KOP LEMBAGA */
+  .kop {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 3px solid #1f2328;
+    padding-bottom: 16px;
+    margin-bottom: 4px;
+  }
+  .kop-logo {
+    width: 64px;
+    height: 64px;
+    background: #1f2328;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .kop-logo svg { width: 38px; height: 38px; }
+  .kop-text h1 {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #1f2328;
+  }
+  .kop-text p {
+    font-size: 12px;
+    color: #57606a;
+    margin-top: 2px;
+  }
+  .kop-sub {
+    font-size: 11px;
+    color: #57606a;
+    text-align: right;
+    margin-bottom: 20px;
+    padding-top: 4px;
+  }
+
+  /* JUDUL DOKUMEN */
+  .doc-title {
+    text-align: center;
+    margin: 24px 0 8px;
+  }
+  .doc-title h2 {
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #1f2328;
+  }
+  .doc-title .nomor {
+    font-size: 12px;
+    color: #57606a;
+    margin-top: 4px;
+  }
+  .divider {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 16px 0;
+  }
+  .divider-thick {
+    border: none;
+    border-top: 2px solid #1f2328;
+    margin: 20px 0;
+  }
+
+  /* META INFO */
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 32px;
+    background: #f7f8fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+  }
+  .meta-item { font-size: 13px; }
+  .meta-item .label { color: #57606a; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .meta-item .value { font-weight: 600; color: #1f2328; margin-top: 1px; }
+
+  /* SECTION */
+  .section { margin-bottom: 28px; }
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #1f2328;
+    border-left: 4px solid #1f2328;
+    padding-left: 10px;
+    margin-bottom: 12px;
+  }
+  .section-title.accent { border-left-color: #3b82d4; }
+  .section-title.warning { border-left-color: #d97706; }
+  .section-title.critical { border-left-color: #dc2626; }
+
+  p { margin-bottom: 10px; font-size: 13.5px; }
+
+  /* KPI CARDS */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .kpi-card {
+    background: #f7f8fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 12px 14px;
+    text-align: center;
+  }
+  .kpi-card .kpi-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1f2328;
+    line-height: 1.2;
+  }
+  .kpi-card .kpi-value.red { color: #dc2626; }
+  .kpi-card .kpi-value.amber { color: #d97706; }
+  .kpi-card .kpi-value.green { color: #16a34a; }
+  .kpi-card .kpi-label {
+    font-size: 11px;
+    color: #57606a;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-bottom: 16px; }
+  th {
+    background: #1f2328;
+    color: #ffffff;
+    text-align: left;
+    padding: 8px 10px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+  td { padding: 7px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #f7f8fa; }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .badge-critical { background: #fee2e2; color: #dc2626; }
+  .badge-warning { background: #fef3c7; color: #d97706; }
+  .badge-safe { background: #dcfce7; color: #16a34a; }
+
+  /* CHAIN DIAGRAM */
+  .chain-box {
+    background: #f7f8fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #1f2328;
+  }
+  .chain-box .chain-title {
+    font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #57606a;
+    margin-bottom: 10px;
+  }
+  .chain-critical { color: #dc2626; font-weight: 700; }
+  .chain-warning { color: #d97706; font-weight: 600; }
+
+  /* BLUEPRINT TIMELINE */
+  .timeline { border-left: 3px solid #e5e7eb; padding-left: 20px; margin-left: 8px; }
+  .timeline-item { position: relative; margin-bottom: 22px; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -27px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1f2328;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 2px #1f2328;
+  }
+  .timeline-item .week-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #3b82d4;
+    margin-bottom: 3px;
+  }
+  .timeline-item .week-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #1f2328;
+    margin-bottom: 8px;
+  }
+  .timeline-item ul { padding-left: 16px; margin: 0; }
+  .timeline-item li { font-size: 13px; color: #1f2328; margin-bottom: 4px; }
+
+  /* KPI TARGET TABLE */
+  .target-highlight { font-weight: 700; color: #16a34a; }
+
+  /* PENUTUP */
+  .penutup {
+    background: #f7f8fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 16px 20px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* TTD */
+  .ttd-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 20px;
+  }
+  .ttd-box {
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .ttd-box .ttd-label { font-size: 11px; color: #57606a; text-transform: uppercase; letter-spacing: 0.04em; }
+  .ttd-box .ttd-name { font-size: 13px; font-weight: 700; margin-top: 56px; border-top: 1px solid #1f2328; padding-top: 6px; }
+  .ttd-box .ttd-jabatan { font-size: 12px; color: #57606a; }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 12px;
+    color: #92400e;
+    margin-top: 20px;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #57606a;
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e7eb;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  
+  <div class="kop">
+    <div class="kop-logo">
+      <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="19" cy="19" r="17" stroke="#ffffff" stroke-width="2"></circle>
+        <path d="M10 27 L14 11 L19 22 L24 11 L28 27" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+        <circle cx="19" cy="9" r="2" fill="#ffffff"></circle>
+      </svg>
+    </div>
+    <div class="kop-text">
+      <h1>Program Studi Ilmu Komputer &amp; Teknik Elektro</h1>
+      <p>Universitas Illinois Urbana–Champaign (UIUC)  |  Sistem Penjaminan Mutu Akademik</p>
+      <p>Jl. Akademika No. 1, Kampus Utama  |  datasight@prodi.ac.id</p>
+    </div>
+  </div>
+  <div class="kop-sub">Nomor Dokumen: DS-AUDIT/2025/001  |  Tanggal Terbit: Semester Terkini</div>
+
+  
+  <div class="doc-title">
+    <h2>Laporan Eksekutif Audit Kurikulum Akademik</h2>
+    <div class="nomor">Analisis Rantai Risiko Prasyarat &amp; Rencana Intervensi Strategis<br />Berbasis OBE &amp; Standar Nasional Pendidikan Tinggi (SN-Dikti)</div>
+  </div>
+  <hr class="divider-thick" />
+
+  
+  <div class="meta-grid">
+    <div class="meta-item">
+      <div class="label">Ditujukan Kepada</div>
+      <div class="value">Ketua Program Studi &amp; Anggota Senat Kurikulum</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Dipersiapkan Oleh</div>
+      <div class="value">DataSight Copilot — Academic Decision Support</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Periode Semester</div>
+      <div class="value">Terkini (Current Academic Period)</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Ambang Batas Kritis</div>
+      <div class="value">D/E Rate &gt; 5.0%</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Standar Referensi</div>
+      <div class="value">SN-Dikti, OBE, IKU 7 Kemendikbudristek</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Status Dokumen</div>
+      <div class="value">Draf Resmi — Bahan Rapat Senat Kurikulum</div>
+    </div>
+  </div>
+
+  
+  <div class="section">
+    <div class="section-title">I. Latar Belakang Kebijakan</div>
+    <p>Audit kurikulum periodik merupakan kewajiban institusional yang diamanatkan oleh <strong>Standar Nasional Pendidikan Tinggi (SN-Dikti)</strong> dalam rangka memastikan kualitas penyelenggaraan pembelajaran berbasis capaian (<em>Outcome-Based Education</em>). Khususnya, pemenuhan <strong>Indikator Kinerja Utama 7 (IKU 7)</strong> mensyaratkan peningkatan proporsi kelas yang menerapkan metode pembelajaran kolaboratif dan partisipatif.</p>
+    <p>Laporan ini disusun berdasarkan analisis kuantitatif data performa akademik semester terkini terhadap <strong>154 mata kuliah</strong> lintas rumpun Ilmu Komputer (CS), Teknik Elektro (ECE), dan Matematika (MATH), dipadukan dengan pemetaan ketergantungan rantai prasyarat kurikulum.</p>
+  </div>
+
+  <hr class="divider" />
+
+  
+  <div class="section">
+    <div class="section-title accent">II. Executive KPI Overview</div>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-value">154</div>
+        <div class="kpi-label">Total MK Diaudit</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value red">139</div>
+        <div class="kpi-label">MK Kritis<br />(D/E &gt; 5%)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value amber">14</div>
+        <div class="kpi-label">MK Waspada</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value green">1</div>
+        <div class="kpi-label">MK Aman</div>
+      </div>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi-card" style="grid-column:span 2">
+        <div class="kpi-value red">23.412</div>
+        <div class="kpi-label">Total Mahasiswa Terdampak Risiko (akumulatif lintas MK)</div>
+      </div>
+      <div class="kpi-card" style="grid-column:span 2">
+        <div class="kpi-value amber">20,2%</div>
+        <div class="kpi-label">D/E Rate Tertinggi — MATH220 Calculus<br />(Absensi: 64,8%)</div>
+      </div>
+    </div>
+    <p style="font-size:12.5px;color:#57606a">Dengan ambang batas kritis 5%, sebesar <strong>90,3% mata kuliah</strong> masuk zona kritis — mengindikasikan perlunya kebijakan intervensi sistemik lintas program studi, bukan sekadar penanganan per-MK secara parsial.</p>
+  </div>
+
+  <hr class="divider" />
+
+  
+  <div class="section">
+    <div class="section-title critical">III. Matriks Analisis Risiko — Top 10 MK Prioritas</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Mata Kuliah</th>
+          <th>Status</th>
+          <th>D/E %</th>
+          <th>Absensi %</th>
+          <th>Prasyarat</th>
+          <th>Rekomendasi Intervensi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>MATH220</strong><br /><span style="color:#57606a;font-size:11.5px">Calculus</span></td>
+          <td><span class="badge badge-critical">CRITICAL</span></td>
+          <td><strong style="color:#dc2626">20,2%</strong></td>
+          <td style="color:#dc2626">64,8%</td>
+          <td>MATH115</td>
+          <td>Early warning absensi + perbaikan prasyarat masuk</td>
+        </tr>
+        <tr>
+          <td><strong>ECE512</strong><br /><span style="color:#57606a;font-size:11.5px">Computer Microarchitecture</span></td>
+          <td><span class="badge badge-warning">WARNING</span></td>
+          <td><strong style="color:#d97706">19,2%</strong></td>
+          <td>93,0%</td>
+          <td>—</td>
+          <td>Evaluasi bobot asesmen proyek kompleks</td>
+        </tr>
+        <tr>
+          <td><strong>MATH115</strong><br /><span style="color:#57606a;font-size:11.5px">Preparation for Calculus</span></td>
+          <td><span class="badge badge-warning">WARNING</span></td>
+          <td><strong style="color:#d97706">18,4%</strong></td>
+          <td style="color:#dc2626">67,2%</td>
+          <td>Mandiri</td>
+          <td>Placement test diagnostik awal semester</td>
+        </tr>
+        <tr>
+          <td><strong>ECE211</strong><br /><span style="color:#57606a;font-size:11.5px">Analog Circuits &amp; Systems</span></td>
+          <td><span class="badge badge-warning">WARNING</span></td>
+          <td><strong style="color:#d97706">18,2%</strong></td>
+          <td style="color:#dc2626">67,5%</td>
+          <td>—</td>
+          <td>Restrukturisasi modul praktikum + sesi asistensi</td>
+        </tr>
+        <tr>
+          <td><strong>ECE210</strong><br /><span style="color:#57606a;font-size:11.5px">Analog Signal Processing</span></td>
+          <td><span class="badge badge-warning">WARNING</span></td>
+          <td><strong style="color:#d97706">15,1%</strong></td>
+          <td>71,9%</td>
+          <td>ECE110, MATH285</td>
+          <td>Sinkronisasi materi kalkulus diferensial lintas MK</td>
+        </tr>
+        <tr>
+          <td><strong>ECE340</strong><br /><span style="color:#57606a;font-size:11.5px">Semiconductor Electronics</span></td>
+          <td><span class="badge badge-warning">WARNING</span></td>
+          <td><strong style="color:#d97706">14,1%</strong></td>
+          <td>73,2%</td>
+          <td>—</td>
+          <td>Modul visualisasi interaktif fisika semikonduktor</td>
+        </tr>
+        <tr>
+          <td><strong>MATH453</strong><br /><span style="color:#57606a;font-size:11.5px">Number Theory</span></td>
+          <td><span class="badge badge-warning">WARNING</span></td>
+          <td><strong style="color:#d97706">13,6%</strong></td>
+          <td>73,9%</td>
+          <td>—</td>
+          <td>Asesmen formatif berkala + pendekatan komputasi</td>
+        </tr>
+        <tr>
+          <td><strong>ECE391</strong><br /><span style="color:#57606a;font-size:11.5px">Computer Systems Engineering</span></td>
+          <td><span class="badge badge-warning">WARNING</span></td>
+          <td><strong style="color:#d97706">12,9%</strong></td>
+          <td>74,9%</td>
+          <td>ECE220, CS225</td>
+          <td>Bridging course pemrograman sistem &amp; manajemen memori</td>
+        </tr>
+        <tr>
+          <td><strong>MATH101</strong><br /><span style="color:#57606a;font-size:11.5px">Thinking Mathematically</span></td>
+          <td><span class="badge badge-warning">WARNING</span></td>
+          <td><strong style="color:#d97706">12,1%</strong></td>
+          <td>76,1%</td>
+          <td>—</td>
+          <td>Implementasi IKU 7 — pembelajaran kolaboratif-partisipatif</td>
+        </tr>
+        <tr>
+          <td><strong>ECE310</strong><br /><span style="color:#57606a;font-size:11.5px">Digital Signal Processing</span></td>
+          <td><span class="badge badge-warning">WARNING</span></td>
+          <td><strong style="color:#d97706">12,0%</strong></td>
+          <td>76,2%</td>
+          <td>—</td>
+          <td>Integrasi simulasi MATLAB/Python + pemetaan ulang CPL</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  
+  <div class="section">
+    <div class="section-title critical">IV. Diagram Rantai Risiko Prasyarat</div>
+
+    <div class="chain-box">
+      <div class="chain-title">Rantai 1 — Matematika Fondasi (MATH)</div>
+      <span class="chain-warning">MATH115</span> (18,4% D/E, 67,2% absensi)<br />
+         └──► <span class="chain-critical">MATH220</span> (20,2% D/E, 64,8% absensi) 🚨 CRITICAL BOTTLENECK<br />
+                 ├──► MATH231 (5,8% D/E) ──► MATH241 (8,6% D/E)<br />
+                 │                        ├──► MATH285 ──► <span class="chain-warning">ECE210</span> (15,1% D/E)<br />
+                 │                        ├──► MATH415 ──► CS446<br />
+                 │                        └──► ECE313, MATH461<br />
+                 └──► MATH257 ──► CS374, CS440, CS357
+    </div>
+
+    <div class="chain-box">
+      <div class="chain-title">Rantai 2 — Ilmu Komputer (CS)</div>
+      CS124 (4,3% D/E)<br />
+         └──► <span class="chain-warning">CS128</span> (8,7% D/E) ──► CS222, CS233<br />
+                 └──► <span class="chain-warning">CS225</span> (6,6% D/E) 🔴 CRITICAL BOTTLENECK<br />
+                            ├──► CS341 ──► <span class="chain-warning">CS425</span>, CS438<br />
+                            ├──► CS374 ──► CS446, <span class="chain-warning">CS473</span> (8,6%)<br />
+                            ├──► CS411, CS421, CS440<br />
+                            └──► ECE391 (lihat Rantai 3)
+    </div>
+
+    <div class="chain-box">
+      <div class="chain-title">Rantai 3 — Teknik Elektro (ECE)</div>
+      <span class="chain-warning">ECE110</span> (9,8% D/E, 79,3% absensi)<br />
+         ├──► ECE120 (4,2% D/E) ──► <span class="chain-warning">ECE220</span> (10,8% D/E)<br />
+         │                            ├──► <span class="chain-warning">ECE391</span> (12,9% D/E) ──► ECE411<br />
+         │                            └──► ECE385<br />
+         └──► <span class="chain-warning">ECE210</span> (15,1% D/E) [dengan MATH285]
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  
+  <div class="section">
+    <div class="section-title accent">V. 4-Week Syllabus Realignment Blueprint — Opsi A: Investigasi Materi Fondasi</div>
+    <p style="margin-bottom:16px;font-size:13px">Berikut adalah rencana tindak intervensi empat minggu yang telah divalidasi berdasarkan temuan audit, siap dieksekusi mulai awal semester mendatang:</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="week-label">Minggu 1</div>
+        <div class="week-title">Pemetaan Defisit Konseptual (Diagnostic Mapping)</div>
+        <ul>
+          <li>Rapat koordinasi dosen pengampu MATH115 + MATH220, CS124 + CS128 + CS225, ECE110 + ECE220 + ECE391</li>
+          <li>Identifikasi topik bottleneck: limit/turunan/integral (MATH), pointer/rekursi/struktur data (CS), rangkaian-ke-sistem (ECE)</li>
+          <li>Analisis butir soal UTS/UAS 2 semester terakhir untuk memetakan pola kegagalan berulang</li>
+          <li><strong>Output:</strong> Matriks Defisit Konseptual per rantai prasyarat</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week-label">Minggu 2</div>
+        <div class="week-title">Restrukturisasi Silabus &amp; Capaian Pembelajaran (CPL/CPMK)</div>
+        <ul>
+          <li>Pangkas materi teoretis non-esensial; alokasikan <strong>+30% jam praktikum</strong> pada topik bottleneck</li>
+          <li>MATH115→220: Tambah latihan soal bertahap + sesi problem-solving mingguan</li>
+          <li>CS124→225: Tambah lab coding terbimbing 2× per minggu</li>
+          <li>ECE110→220: Sinkronisasi silabus lintas departemen ECE &amp; CS</li>
+          <li>Revisi CPMK selaras OBE &amp; SN-Dikti — setiap CPMK harus terukur dan terverifikasi</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week-label">Minggu 3</div>
+        <div class="week-title">Penerbitan Modul Bridging Course Mandiri di LMS</div>
+        <ul>
+          <li><strong>MATH Bridging Pack:</strong> Review Aljabar &amp; Trigonometri → Intuisi Limit &amp; Kekontinuan → Teknik Turunan Terapan</li>
+          <li><strong>CS Bridging Pack:</strong> Manajemen Memori &amp; Pointer → Rekursi &amp; Analisis Kompleksitas → Struktur Data Fundamental</li>
+          <li><strong>ECE Bridging Pack:</strong> Review Hukum Kirchhoff &amp; Thevenin → Pengantar Sistem Digital &amp; Assembly</li>
+          <li>Syarat akses MK lanjutan: selesaikan bridging module + lulus pre-assessment ≥ 70%</li>
+          <li>Publikasikan di LMS <strong>H-2 minggu sebelum masa KRS</strong></li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week-label">Minggu 4</div>
+        <div class="week-title">Sinkronisasi Early Warning System Absensi</div>
+        <ul>
+          <li>Penguncian otomatis: mahasiswa dengan kehadiran &lt; 75% pada minggu ke-4 → radar konseling akademik</li>
+          <li>Eskalasi: Notifikasi ke Dosen Wali → Sesi konseling wajib (maks. 7 hari) → Penguncian akses LMS jika abai</li>
+          <li>Khusus MATH220 &amp; ECE220: absensi digital real-time + notifikasi SMS/email ke mahasiswa &amp; wali</li>
+          <li>Dashboard monitoring Kaprodi: update mingguan tren absensi vs rasio D/E per MK</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  
+  <div class="section">
+    <div class="section-title accent">VI. Target KPI Pasca-Intervensi (Evaluasi Akhir Semester)</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Mata Kuliah</th>
+          <th>D/E Rate Saat Ini</th>
+          <th>Target D/E Rate</th>
+          <th>Absensi Saat Ini</th>
+          <th>Target Absensi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>MATH220</strong> – Calculus</td>
+          <td style="color:#dc2626;font-weight:700">20,2%</td>
+          <td class="target-highlight">≤ 12%</td>
+          <td style="color:#dc2626">64,8%</td>
+          <td class="target-highlight">≥ 80%</td>
+        </tr>
+        <tr>
+          <td><strong>MATH115</strong> – Prep for Calculus</td>
+          <td style="color:#d97706;font-weight:700">18,4%</td>
+          <td class="target-highlight">≤ 10%</td>
+          <td style="color:#dc2626">67,2%</td>
+          <td class="target-highlight">≥ 80%</td>
+        </tr>
+        <tr>
+          <td><strong>ECE211</strong> – Analog Circuits</td>
+          <td style="color:#d97706;font-weight:700">18,2%</td>
+          <td class="target-highlight">≤ 10%</td>
+          <td style="color:#dc2626">67,5%</td>
+          <td class="target-highlight">≥ 80%</td>
+        </tr>
+        <tr>
+          <td><strong>ECE220</strong> – Computer Systems</td>
+          <td style="color:#d97706;font-weight:700">10,8%</td>
+          <td class="target-highlight">≤ 6%</td>
+          <td style="color:#d97706">77,9%</td>
+          <td class="target-highlight">≥ 85%</td>
+        </tr>
+        <tr>
+          <td><strong>CS128</strong> – Intro CS II</td>
+          <td style="color:#d97706;font-weight:700">8,7%</td>
+          <td class="target-highlight">≤ 5%</td>
+          <td style="color:#d97706">80,9%</td>
+          <td class="target-highlight">≥ 85%</td>
+        </tr>
+        <tr>
+          <td><strong>ECE391</strong> – Computer Systems Engrg</td>
+          <td style="color:#d97706;font-weight:700">12,9%</td>
+          <td class="target-highlight">≤ 7%</td>
+          <td style="color:#d97706">74,9%</td>
+          <td class="target-highlight">≥ 82%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  
+  <div class="section">
+    <div class="section-title">VII. Penutup &amp; Rekomendasi Tindak Lanjut</div>
+    <div class="penutup">
+      <p>Berdasarkan hasil audit kuantitatif berbasis data semester terkini, Program Studi direkomendasikan untuk <strong>segera mengeksekusi 4-Week Syllabus Realignment Blueprint (Opsi A)</strong> sebagai respons preventif terhadap akumulasi risiko bottleneck pada 3 rantai prasyarat utama.</p>
+      <p>Langkah-langkah yang diusulkan telah diselaraskan dengan mandatori <strong>SN-Dikti</strong>, prinsip <strong>Outcome-Based Education (OBE)</strong>, dan target capaian <strong>IKU 7</strong> terkait proporsi kelas kolaboratif-partisipatif. Efektivitas intervensi akan dievaluasi pada akhir semester melalui perbandingan KPI yang tertera pada Bagian VI.</p>
+      <p style="margin-bottom:0">Laporan ini bersifat dokumen pendukung keputusan dan <strong>memerlukan validasi kualitatif</strong> bersama koordinator mata kuliah terkait sebelum kebijakan formal diterbitkan.</p>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  
+  <div class="section">
+    <div class="section-title">VIII. Lembar Verifikasi &amp; Persetujuan</div>
+    <div class="ttd-grid">
+      <div class="ttd-box">
+        <div class="ttd-label">Diverifikasi oleh</div>
+        <div class="ttd-name">____________________________</div>
+        <div class="ttd-jabatan">Ketua Program Studi</div>
+      </div>
+      <div class="ttd-box">
+        <div class="ttd-label">Disetujui oleh</div>
+        <div class="ttd-name">____________________________</div>
+        <div class="ttd-jabatan">Wakil Dekan Bidang Akademik</div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      ⚠️ <strong>Disclaimer:</strong> Laporan ini merupakan keluaran sistem pendukung keputusan akademik berbasis data agregat (<em>DataSight Copilot</em>) dan tidak menggantikan kebijakan resmi program studi. Seluruh temuan memerlukan verifikasi kualitatif bersama dosen pengampu mata kuliah terkait sebelum dijadikan dasar keputusan formal senat.
+    </div>
+  </div>
+
+  
+  <div class="footer">
+    Dibuat dengan <strong>IBM Bob</strong> — DataSight Academic Copilot  |  Sistem Analitik Kurikulum Berbasis OBE &amp; SN-Dikti
+  </div>
+
+</div>
+</body>
+</html>
